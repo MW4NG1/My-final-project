@@ -35,26 +35,58 @@ if (form) {
 
 // ONLY RUN THIS ON tasks.html
 if (document.getElementById("taskList")) {
+  displayTasks();}
+
+function displayTasks() {
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  let taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    let taskItem = document.createElement("div");
+
+    // Style based on completion
+    taskItem.classList.add("task-item");
+
+    if (task.completed) {
+      taskItem.classList.add("completed");
+    }
+
+    taskItem.innerHTML = `
+      <h3>${task.title}</h3>
+      <p>Deadline: ${task.deadline}</p>
+      <p>Priority: ${task.priority}</p>
+
+      <button onclick="toggleComplete(${index})">
+        ${task.completed ? "Undo" : "Complete"}
+      </button>
+
+      <button class="delete-btn" onclick="deleteTask(${index})">
+  Delete
+</button>
+    `;
+
+    taskList.appendChild(taskItem);
+  });
+}
+
+function toggleComplete(index) {
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  tasks[index].completed = !tasks[index].completed;
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
   displayTasks();
+}
 
-  function displayTasks() {
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+function deleteTask(index) {
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    let taskList = document.getElementById("taskList");
-    taskList.innerHTML = "";
+  tasks.splice(index, 1);
 
-    tasks.forEach((task, index) => {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
-      let taskItem = document.createElement("div");
-
-      taskItem.innerHTML = `
-        <h3>${task.title}</h3>
-        <p>Deadline: ${task.deadline}</p>
-        <p>Priority: ${task.priority}</p>
-      `;
-
-      taskList.appendChild(taskItem);
-    });
-  }
+  displayTasks();
 }
