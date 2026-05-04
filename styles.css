@@ -107,3 +107,10 @@ input, select {
   font-size: 22px;
   font-weight: bold;
 }
+
+/* Center the whole app*/
+.container {
+  max-width: 900px;
+  margin:auto;
+  padding: 20px;
+}
