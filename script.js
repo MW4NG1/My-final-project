@@ -90,3 +90,22 @@ function deleteTask(index) {
 
   displayTasks();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Only run on index.html
+  if (document.getElementById("taskCount")) {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    let totalTasks = tasks.length;
+
+    let completedTasks = tasks.filter((task) => task.completed).length;
+
+    let progress =
+      totalTasks === 0 ? 0 : Math.round((completedTasks / totalTasks) * 100);
+
+    // Update values on page
+    document.getElementById("taskCount").textContent = totalTasks;
+    document.getElementById("completedCount").textContent = completedTasks;
+    document.getElementById("progress").textContent = progress + "%";
+  }
+});
