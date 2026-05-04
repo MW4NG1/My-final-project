@@ -73,3 +73,22 @@ input, select {
   padding: 5px;
   cursor: pointer;
 }
+
+.stats-container {
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minimax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.stat-box {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+}
