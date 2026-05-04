@@ -35,7 +35,8 @@ if (form) {
 
 // ONLY RUN THIS ON tasks.html
 if (document.getElementById("taskList")) {
-  displayTasks();}
+  displayTasks();
+}
 
 function displayTasks() {
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];

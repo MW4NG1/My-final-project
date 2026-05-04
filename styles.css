@@ -30,7 +30,8 @@ button {
   margin-left: 10px;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 8px;
   margin: 10px 0;
@@ -43,7 +44,7 @@ input, select {
   }
 }
 
- .task-item {
+.task-item {
   padding: 10px;
   margin: 10px 0;
   background: #2a2a2a;
@@ -104,7 +105,7 @@ input, select {
 /* Center the whole app*/
 .container {
   max-width: 900px;
-  margin:auto;
+  margin: auto;
   padding: 20px;
 }
 
@@ -114,5 +115,5 @@ section {
   padding: 25px;
   margin: 20px 0;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
