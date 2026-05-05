@@ -51,12 +51,11 @@ function displayTasks() {
     return;
   }
 
-let filteredTasks = tasks.filter(task => {
-if (currentFilter === "completed") return task.completed;
-if (currentFilter === "pending") return !task.completed;
-return true;
-}
-);
+  let filteredTasks = tasks.filter((task) => {
+    if (currentFilter === "completed") return task.completed;
+    if (currentFilter === "pending") return !task.completed;
+    return true;
+  });
 
   //Existing loop
   filteredTasks.forEach((task, index) => {
