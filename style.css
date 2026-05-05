@@ -130,6 +130,7 @@ section {
   height: 40px;
   object-fit: contain;
   transition: transform 0.3s;
+  filter: drop-shadow(0 0 5px #00adb5);
 }
 
 .logo:hover {
