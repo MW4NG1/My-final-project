@@ -1,3 +1,5 @@
+let currentFilter = "all";
+
 // Get form
 const form = document.getElementById("taskForm");
 
@@ -49,8 +51,15 @@ function displayTasks() {
     return;
   }
 
+let filteredTasks = tasks.filter(task => {
+if (currentFilter === "completed") return task.completed;
+if (currentFilter === "pending") return !task.completed;
+return true;
+}
+);
+
   //Existing loop
-  tasks.forEach((task, index) => {
+  filteredTasks.forEach((task, index) => {
     let taskItem = document.createElement("div");
 
     // Style based on completion
@@ -116,3 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("progress").textContent = progress + "%";
   }
 });
+
+function filterTasks(type) {
+  currentFilter = type;
+  displayTasks();
+}
