@@ -170,3 +170,14 @@ h1 {
     0 0 10px #00adb5,
     0 0 20px #00adb5;
 }
+
+.filters {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.filters button {
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
