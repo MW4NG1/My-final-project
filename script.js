@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("taskCount").textContent = totalTasks;
     document.getElementById("completedCount").textContent = completedTasks;
     document.getElementById("progress").textContent = progress + "%";
+    document.getElementById("progressFill").style.width = progress + "%";
   }
 });
 
