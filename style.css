@@ -43,6 +43,11 @@ select {
   transition: 0.3s;
 }
 
+input:focus, select:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 8px #00adb5;
+}
+
 @media (max-width: 768px) {
   nav a {
     display: block;
