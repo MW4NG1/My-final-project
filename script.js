@@ -49,7 +49,6 @@ function displayTasks() {
     return;
   }
 
-
   //Existing loop
   tasks.forEach((task, index) => {
     let taskItem = document.createElement("div");

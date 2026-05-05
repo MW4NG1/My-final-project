@@ -34,8 +34,8 @@ button {
 }
 
 button:hover {
-background: #00cfc8;
-transform: translateY(-2px);
+  background: #00cfc8;
+  transform: translateY(-2px);
 }
 
 input,
@@ -51,7 +51,8 @@ select {
   transition: 0.3s;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   border-color: #00adb5;
   box-shadow: 0 0 8px #00adb5;
 }
@@ -164,6 +165,8 @@ section {
 
 h1 {
   color: #ffffff;
-  text-shadow: 0 0 5px #00adb5, 0 0 10px #00adb5, 0 0 20px #00adb5;
-
+  text-shadow:
+    0 0 5px #00adb5,
+    0 0 10px #00adb5,
+    0 0 20px #00adb5;
 }
