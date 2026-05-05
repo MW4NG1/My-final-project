@@ -181,3 +181,19 @@ h1 {
   padding: 8px 12px;
   border-radius: 6px;
 }
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: #00adb5;
+  transition: 0.4s ease;
+}
