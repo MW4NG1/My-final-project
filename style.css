@@ -117,3 +117,27 @@ section {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+h1 {
+  color: #ffffff;
+  text-shadow: 0 0 5px #00adb5, 0 0 10px #00adb5, 0 0 20px #00adb5;
+
+}
