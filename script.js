@@ -44,6 +44,13 @@ function displayTasks() {
   let taskList = document.getElementById("taskList");
   taskList.innerHTML = "";
 
+  if (tasks.length === 0) {
+    taskList.innerHTML = "<p>No tasks yet. Add one!</p>";
+    return;
+  }
+
+
+  //Existing loop
   tasks.forEach((task, index) => {
     let taskItem = document.createElement("div");
 
