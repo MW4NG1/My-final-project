@@ -25,6 +25,7 @@ The project consists of three main HTML pages:
 - index.html → Home page/Dashboard
 - add-task.html → Page for adding new tasks
 - tasks.html → Page for viewing and managing tasks
+  
   Other files:
 - style.css → Handles all styling and layout
 - script.js → Handles functionality and logic
