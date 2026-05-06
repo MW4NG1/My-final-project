@@ -1,4 +1,4 @@
-## Smart Study Planner
+# Smart Study Planner
 
 ## Project Overview
 Smart Study Planner is a simple web application that helps students organize and manage their study tasks. Users can add tasks, track deadlines, mark tasks as completed, and monitor their overall progress.
@@ -8,7 +8,6 @@ Students often struggle to keep track of their study tasks, deadlines, and progr
 
 ## Solution
 This project provides a simple and interactive task management system where users can:
-
 - Add study tasks
 - Set deadlines and priorities
 - Mark tasks as completed
@@ -20,7 +19,7 @@ The project consists of three main HTML pages:
 - index.html → Home page/Dashboard
 - add-task.html → Page for adding new tasks
 - tasks.html → Page for viewing and managing tasks
-Other files:
+  Other files:
 - style.css → Handles all styling and layout
 - script.js → Handles functionality and logic
 
